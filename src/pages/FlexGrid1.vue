@@ -1,6 +1,81 @@
 <template>
   <q-page class="q-pa-xl">
     <section class="q-mb-xl">
+      <div class="text-h4">Flexbox - Gutter</div>
+      <q-separator class="q-my-md" />
+      <div class="bg-yellow">
+        <div class="q-gutter-x-md">
+          <div v-for="n in 4" :key="n" class="square"></div>
+        </div>
+        <div class="q-gutter-y-md">
+          <div v-for="n in 4" :key="n" class="bg-primary">{{ n }}</div>
+        </div>
+      </div>
+      <q-separator spaced />
+      <div class="bg-yellow">
+        <div class="row q-col-gutter-md">
+          <div
+            v-for="n in 8"
+            :key="n"
+            class="col-12 col-sm-6 col-md-4 col-lg-3"
+          >
+            <q-card class="my-card">
+              <q-img src="https://cdn.quasar.dev/img/parallax2.jpg">
+                <div class="absolute-bottom text-subtitle2 text-center">
+                  Title
+                </div>
+              </q-img>
+            </q-card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="q-mb-xl">
+      <div class="text-h4">Flexbox - Col</div>
+      <q-separator class="q-my-md" />
+      <div class="row">
+        <div class="border col-2">col-2</div>
+        <div class="border col-8">col-8</div>
+        <div class="border col-2">col-2</div>
+        <div class="border col-2">col-2</div>
+      </div>
+      <q-separator spaced />
+      <div class="row">
+        <div class="border col">col</div>
+        <div class="border col">col</div>
+        <div class="border col">col</div>
+        <div class="border col">col</div>
+      </div>
+      <q-separator spaced />
+      <div class="row">
+        <div class="border col-auto">col</div>
+        <div class="border col">col</div>
+        <div class="border col">col</div>
+        <div class="border col">col</div>
+      </div>
+      <q-separator spaced />
+      <div class="row">
+        <div class="border col-grow">col</div>
+        <div class="border col-1">col</div>
+        <div class="border col-1">col</div>
+        <div class="border col-1">col</div>
+      </div>
+      <q-separator spaced />
+      <div class="row no-wrap">
+        <div class="border col-auto">
+          col-autocol-autocol-autocol-autocol-autocol-auto
+        </div>
+        <div class="border col-shrink">
+          col-shrinkcol-shrinkcol-shrinkcol-shrinkcol-shrink
+        </div>
+        <div class="border col-1">col</div>
+        <div class="border col-1">col</div>
+        <div class="border col-1">col</div>
+        <div class="border col-1">col</div>
+      </div>
+    </section>
+    <section class="q-mb-xl">
       <div class="text-h4">Toolbar</div>
       <q-separator class="q-my-md" />
       <div
@@ -69,5 +144,9 @@
   display: inline-block;
   font-weight: 900;
   color: #fff;
+}
+.border {
+  border: 1px solid $primary;
+  padding: 8px;
 }
 </style>
