@@ -13,6 +13,7 @@
 
         <q-toolbar-title> Quasar App </q-toolbar-title>
 
+        <q-btn stretch flat label="SUB LAYOUT" to="/sub" />
         <q-btn flat round dense :icon="darkModeIcon" @click="toggleDarkMode" />
       </q-toolbar>
     </q-header>
