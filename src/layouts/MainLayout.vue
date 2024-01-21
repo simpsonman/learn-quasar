@@ -15,6 +15,14 @@
 
         <q-btn stretch flat label="SUB LAYOUT" to="/sub" />
         <q-btn flat round dense :icon="darkModeIcon" @click="toggleDarkMode" />
+
+        <q-btn round size="sm" class="q-ml-md" to="/profile">
+          <q-avatar>
+            <img
+              src="https://phinf.pstatic.net/contact/20231218_206/1702863871039gCYAk_PNG/%BA%ED%B7%CE%B1%D7_%C7%C1%B7%CE%C7%CA.png?type=s160"
+            />
+          </q-avatar>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
@@ -78,12 +86,12 @@ const linksList = [
     icon: 'school',
     to: '/flex-grid-1',
   },
-  {
-    title: 'Flex Grid 2',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/flex-grid-2',
-  },
+  // {
+  //   title: 'Flex Grid 2',
+  //   caption: 'quasar.dev',
+  //   icon: 'school',
+  //   to: '/flex-grid-2',
+  // },
 ];
 </script>
 
