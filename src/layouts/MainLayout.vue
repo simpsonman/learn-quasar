@@ -16,12 +16,23 @@
         <q-btn stretch flat label="SUB LAYOUT" to="/sub" />
         <q-btn flat round dense :icon="darkModeIcon" @click="toggleDarkMode" />
 
-        <q-btn round size="sm" class="q-ml-md" to="/profile">
+        <q-btn round size="sm" class="q-ml-md">
           <q-avatar>
             <img
               src="https://phinf.pstatic.net/contact/20231218_206/1702863871039gCYAk_PNG/%BA%ED%B7%CE%B1%D7_%C7%C1%B7%CE%C7%CA.png?type=s160"
             />
           </q-avatar>
+          <q-menu :offset="[0, 10]">
+            <q-list style="min-width: 100px">
+              <q-item clickable v-close-popup to="/profile">
+                <q-item-section>프로필</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup to="/auth/sign-in">
+                <q-item-section>로그아웃</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
         </q-btn>
       </q-toolbar>
     </q-header>
