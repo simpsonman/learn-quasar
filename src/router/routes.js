@@ -54,6 +54,10 @@ const routes = [
         path: 'quasar-utils',
         component: () => import('src/pages/QuasarUtils.vue'),
       },
+      {
+        path: 'quasar-language-packs',
+        component: () => import('src/pages/QuasarLanguagePacks.vue'),
+      },
     ],
   },
   {
