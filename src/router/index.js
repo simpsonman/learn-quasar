@@ -6,6 +6,7 @@ import {
   createWebHashHistory,
 } from 'vue-router';
 import routes from './routes';
+import { LoadingBar } from 'quasar';
 
 /*
  * If not building with SSR mode, you can
@@ -31,6 +32,19 @@ export default route(function (/* { store, ssrContext } */) {
     // quasar.conf.js -> build -> vueRouterMode
     // quasar.conf.js -> build -> publicPath
     history: createHistory(process.env.VUE_ROUTER_BASE),
+  });
+
+  Router.beforeEach(() => {
+    LoadingBar.start();
+    // $q.loadingBar.setDefaults({
+    //   color: 'purple',
+    //   size: '15px',
+    //   // position: 'bottom',
+    // });
+  });
+
+  Router.afterEach(() => {
+    LoadingBar.stop();
   });
 
   return Router;
