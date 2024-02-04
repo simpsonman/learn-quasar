@@ -89,6 +89,16 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/youtube',
+    component: () => import('src/layouts/youtube/IndexYoutube.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('pages/youtube/IndexPage.vue'),
+      },
+    ],
+  },
 
   // Always leave this as last one,
   // but you can also remove it
